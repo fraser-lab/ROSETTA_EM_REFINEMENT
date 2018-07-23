@@ -23,3 +23,16 @@ make sure chains are A not 1A
 remove Mg and GTP (there are tutorials for dealing with this on DiMaio website)
 
 -ignore_unrecognized_res flag has been removed from rosetta_scripts command
+
+Here are two useful arguments you can pass to "CartesianSampler":
+
+residues_to_exclude=""
+residues_to_include=""
+
+In this way you can tell Rosetta which residues you would like to in/exclude in the "auto" refinement setup.
+
+eg:
+ <CartesianSampler name="cen5_50" automode_scorecut="-0.5" scorefxn="cen" residues_to_exclude="234A-299A" residues_to_include="400A-415A,422A,499A"
+ mcscorefxn="cen" fascorefxn="dens_soft" strategy="auto" fragbias="density"
+ rms="%%rms%%" ncycles="200" fullatom="0" bbmove="1" nminsteps="25" temp="4"
+ fraglens="7" nfrags="25"/>
