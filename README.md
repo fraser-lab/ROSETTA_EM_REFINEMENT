@@ -24,6 +24,7 @@ remove Mg and GTP (there are tutorials for dealing with this on DiMaio website)
 
 -ignore_unrecognized_res flag has been removed from rosetta_scripts command
 
+#more local sampling notes
 Here are two useful arguments you can pass to "CartesianSampler":
 
 residues_to_exclude=""
